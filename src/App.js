@@ -22,7 +22,7 @@ function App() {
                     <Route path="/about/vision" element={<Vision />} /> */}
                 {/* </Route> */}
             </Routes>
-            {/* <UserMsg /> */}
+            <UserMsg />
         </Router>
     )
 }
