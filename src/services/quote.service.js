@@ -1,7 +1,13 @@
 import axios from 'axios'
 // import KEY from '../KEY'
+
+
+ let liked=[
+
+ ]
 export const quoteService={
     getNewQuote,
+    addToLiked
 
 }
 function getNewQuote(){
@@ -39,8 +45,12 @@ function getNewQuote(){
       }
 }
 
-function addToLiked(){
-
+function addToLiked(quote){
+    console.log(liked)
+liked.push(quote)
+console.log('liked sucssesfuly!')
+console.log(liked)
 }
+
 
 

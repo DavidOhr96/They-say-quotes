@@ -9,12 +9,10 @@ export function AppHeader(){
         <Fragment>
         <header>
             {/* <UserMsg /> */}
-             
-                    <NavLink to="/"> Home </NavLink>
-                    <NavLink to="/about"> About </NavLink>
-                    <NavLink to="/index">index</NavLink>
-                    <NavLink to="/generator">Generator</NavLink>
-                    <NavLink to="/favorites">Favorites</NavLink>
+             <ul>
+                 <li>   <NavLink to="/generator">Generator</NavLink></li>
+                 <li> <NavLink to="/favorites">Favorites</NavLink></li>
+                    </ul>
         </header>
         <div className='title'>
             <h1>welcome to our quote site</h1>
