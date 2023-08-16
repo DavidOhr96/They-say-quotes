@@ -16,7 +16,7 @@ function App() {
         <Router>
             <AppHeader />
             <Routes>
-                {routes.map(route=> <Route key={route.path} exact={true} element={route.componenet} path={route.path} />)}
+                {routes.map(route=> <Route key={route.path} exact={true} element={route.component} path={route.path} />)}
                 {/* <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<About />} > */}
                     {/* <Route path="/about/team" element={<Teams />} />
