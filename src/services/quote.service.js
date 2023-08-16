@@ -2,6 +2,7 @@ import axios from 'axios'
 // import KEY from '../KEY'
 export const quoteService={
     getNewQuote,
+
 }
 function getNewQuote(){
     // axios request got error switched to manual responce/////////////////
@@ -37,3 +38,9 @@ function getNewQuote(){
         }
       }
 }
+
+function addToLiked(){
+
+}
+
+
