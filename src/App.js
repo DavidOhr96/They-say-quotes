@@ -1,8 +1,7 @@
 import routes from './routes.js'
 import React from 'react';
 import './App.scss';
-import {HomePage} from './pages/home-page.jsx'
-import {About} from './pages/about.jsx'
+
 import { HashRouter as Router, Routes, Route, Switch } from 'react-router-dom';
 import {AppHeader} from './cmps/app-header.jsx'
 import {UserMsg}from './cmps/user-msg.jsx'

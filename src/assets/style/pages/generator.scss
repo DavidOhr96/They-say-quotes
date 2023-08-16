@@ -1,3 +1,48 @@
 body{
     background-color: $clr1;
 }
+.generator{
+    button{
+        &:hover{
+            cursor: pointer;
+        }
+        border-radius: 17px;
+        border: none;
+        background-color: $clr4;
+    }
+    h2{
+        margin: auto;
+        background-color: $clr3;
+        text-align: center;
+        width: 80%;
+        padding: 10px;
+        border-radius: 17px;
+    }
+    .panel{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+        h3{
+            background-color: $clr3;
+            padding: 10px;
+            border-radius: 17px;
+            text-align: center;
+            display: inline;
+        }
+    }
+    .like{
+        align-self: center;
+        height: 45px;
+    }
+    .button-container{
+        margin-top: 20px;
+        display: flex;
+    }
+    .new-quote{
+        border-radius: 0;
+        padding: 20px;
+        align-self: center;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
