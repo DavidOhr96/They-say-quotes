@@ -7,7 +7,8 @@ import KEY from '../KEY/KEY'
  ]
 export const quoteService={
     getNewQuote,
-    addToLiked
+    addToLiked,
+    liked
 
 }
 async function getNewQuote(){
