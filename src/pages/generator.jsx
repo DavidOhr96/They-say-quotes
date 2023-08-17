@@ -8,7 +8,7 @@ export function Generator() {
     })
 
     function getQuote() {
-        setQuote(quoteService.getNewQuote().contents.quotes[0])
+        quoteService.getNewQuote().then(data=>setQuote(data))
     }
     function onLike() {
         quoteService.addToLiked(quote)

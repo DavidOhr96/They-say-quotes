@@ -1,5 +1,5 @@
 import axios from 'axios'
-// import KEY from '../KEY'
+import KEY from '../KEY/KEY'
 
 
  let liked=[
@@ -10,39 +10,15 @@ export const quoteService={
     addToLiked
 
 }
-function getNewQuote(){
-    // axios request got error switched to manual responce/////////////////
-    // return await  axios.get('https://quotes.rest/quote/random', {
-    //     params: {
-    //       'language': 'en',
-    //       'limit': '1'
-    //     },
-    //     headers: {
-    //       'accept': 'application/json',
-    //       'Authorization': 'Bearer 23SqOlr9z2ixnLb1QQwARtToRCcH3NYFnRgpFHTY'
-    //     }
-    //   }).then (res=>res.data);
-    return{
-        "success": {
-          "total": 1
+async function getNewQuote(){
+    return await  axios.get('https://api.api-ninjas.com/v1/quotes', {
+        params: {
+          'category': 'happiness',
         },
-        "contents": {
-          "quotes": [
-            {
-              "quote": "The day soldiers stop bringing you their problems is the day you have stopped leading them. They have either lost confidence that you can help them or concluded that you do not care. Either case is a failure of leadership.",
-              "length": "222",
-              "author": "Colin Powell",
-              "tags": [
-                "confidence",
-                "leadership",
-                "management"
-              ],
-              "category": "management",
-              "id": "XLa1AmylKv1XF_dXcyhvdweF"
-            }
-          ]
+        headers: {
+          'X-Api-Key': KEY
         }
-      }
+      }).then (res=>res.data[0]);
 }
 
 function addToLiked(quote){
