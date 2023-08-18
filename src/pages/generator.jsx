@@ -18,7 +18,7 @@ export function Generator() {
             <h2>"{quote.quote}"</h2>
             <div className='panel'>
                 <button className='like' onClick={onLike}>Like</button>
-                <h3>author: {quote.author}</h3>
+                <h3>-{quote.author}</h3>
             </div>
             <div className='button-container'>
             <button className='new-quote' onClick={getQuote}> new quote</button>

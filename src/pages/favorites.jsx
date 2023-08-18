@@ -6,14 +6,18 @@ export function Favorites() {
         setFavorites(quoteService.liked)
     },[])
     console.log(favorites)
-    if (!favorites) return 'You have no liked quotes. like some quotes and come back to see them'
+    if (!favorites.length) return<div className='no-favs'> 'You have no liked quotes. like some quotes and come back to see them'</div>
     return (
-        <div>
-      {  console.log(favorites)}
-        { favorites.map(quote => quote.quote) }
-        </div>
-        // <h1>
-        //    {favorites[0].quote}
-        // </h1>
+        <main className='favorites'>
+      {/* {  console.log(favorites)} */}
+      <ul>
+        { favorites.map(quote =>{
+          return <li> {quote.quote} 
+          <br/>
+          <br/>
+          -{quote.author}</li> }) }
+          </ul>
+        </main>
+       
     )
 }

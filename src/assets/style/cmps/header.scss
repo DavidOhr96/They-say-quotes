@@ -1,23 +1,28 @@
-ul{
+ul {
     margin: 0;
     display: flex;
     background-color: $clr2;
 
 }
-li{
+
+li {
+    font-weight: 700;
+    font-family: cinzel;
     padding: 5px;
     list-style-type: none;
     margin: 20px;
-    background-color:$clr3 ;
+    background-color: $clr3 ;
     border-radius: 20px;
-    a{
+
+    a {
         color: #222222;
         text-decoration: none;
-    } 
+    }
 }
 
-.title{
-margin: auto;
-text-align: center;
-color:$clr4 ;
+.title {
+    font-family: cinzel;
+    margin: auto;
+    text-align: center;
+    color: $clr4;
 }
