@@ -2,6 +2,9 @@ body{
     background-color: $clr1;
 }
 .generator{
+    .quote{
+        font-family:courgette ;
+    }
     button{
         &:hover{
             cursor: pointer;

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { quoteService } from '../services/quote.service'
+import { storageService } from '../services/storage.service'
 
 export function Generator() {
     const [quote, setQuote] = useState({
@@ -8,21 +9,26 @@ export function Generator() {
     })
 
     function getQuote() {
-        quoteService.getNewQuote().then(data=>setQuote(data))
+        quoteService.getNewQuote().then(data => setQuote(data))
     }
     function onLike() {
-        quoteService.addToLiked(quote)
+        let liked = []
+        const fromStorage = storageService.loadFromStorage('quotesDB')
+        if (fromStorage) liked = fromStorage
+        liked.unshift(quote)
+        storageService.saveToStorage('quotesDB', liked)
+        // quoteService.addToLiked(quote)
     }
     return (
         <main className='generator'>
-            <h2>"{quote.quote}"</h2>
+            <h2 className='quote'>"{quote.quote}"</h2>
             <div className='panel'>
                 <button className='like' onClick={onLike}>Like</button>
-                <h3>-{quote.author}</h3>
+                <h3 className='quote'>-{quote.author}</h3>
             </div>
             <div className='button-container'>
-            <button className='new-quote' onClick={getQuote}> new quote</button>
+                <button className='new-quote' onClick={getQuote}> new quote</button>
             </div>
-       </main>
+        </main>
     )
 }
