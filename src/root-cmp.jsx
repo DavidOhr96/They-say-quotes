@@ -22,7 +22,7 @@ import {UserMsg}from './cmps/user-msg.jsx'
                     <Route path="/about/vision" element={<Vision />} />
                 </Route> */}
             </Routes>
-            <UserMsg />
+            {/* <UserMsg /> */}
         </Router>
     )
 }

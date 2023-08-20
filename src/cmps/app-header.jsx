@@ -8,7 +8,6 @@ export function AppHeader(){
     return(
         <Fragment>
         <header>
-            {/* <UserMsg /> */}
              <ul>
                  <li>   <NavLink to="/">Generator</NavLink></li>
                  <li> <NavLink to="/favorites">Favorites</NavLink></li>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { quoteService } from '../services/quote.service'
 import { storageService } from '../services/storage.service'
+import { showSuccessMsg } from '../services/event-bus.service'
 
 export function Generator() {
     const [quote, setQuote] = useState({
@@ -17,6 +18,7 @@ export function Generator() {
         if (fromStorage) liked = fromStorage
         liked.unshift(quote)
         storageService.saveToStorage('quotesDB', liked)
+       showSuccessMsg('Quote added to favorites ')
     }
     return (
         <main className='generator'>
