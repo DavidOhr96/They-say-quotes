@@ -5,7 +5,7 @@ import {Favorites} from './pages/favorites.jsx'
 export default[
   
     {
-        path:'/generator',
+        path:'/',
         component:<Generator />,
     },
     {

@@ -17,13 +17,12 @@ export function Generator() {
         if (fromStorage) liked = fromStorage
         liked.unshift(quote)
         storageService.saveToStorage('quotesDB', liked)
-        // quoteService.addToLiked(quote)
     }
     return (
         <main className='generator'>
             <h2 className='quote'>"{quote.quote}"</h2>
             <div className='panel'>
-                <button className='like' onClick={onLike}>Like</button>
+                <button className='like' onClick={onLike}>Add to favorites</button>
                 <h3 className='quote'>-{quote.author}</h3>
             </div>
             <div className='button-container'>

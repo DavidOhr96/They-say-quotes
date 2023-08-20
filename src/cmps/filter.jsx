@@ -104,7 +104,7 @@ export function Filter({ filterBy, onSetFilter }) {
                 {/* <label htmlFor="CategorySelector">category: </label> */}
                 <CategorySelector categorys={categorys} onCategoryChange={onCategoryChange}  />
                 </div>
-                <button>filter</button>
+                <button onClick={()=>onSetFilter(filterBy)}>filter</button>
             </form>
         </section>
 

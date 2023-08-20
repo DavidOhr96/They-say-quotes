@@ -10,11 +10,6 @@ export function CategorySelector({ categorys, onCategoryChange }) {
     function handleCategoryChange(event) {
         const category = event.target.value;
         setSelectedCategory(category)
-        // if (event.target.checked) {
-        //     setSelectedCategory([...selectedCategory, category]);
-        // } else {
-        //     setSelectedCategory(selectedCategory.filter(l => l !== category));
-        // }
     }
 
 
@@ -27,19 +22,6 @@ export function CategorySelector({ categorys, onCategoryChange }) {
                  return   <option value={category}>{category}</option>
                 })}
             </select>
-
-
-            {/* {categorys.map(category => (
-                <div key={category}>
-                    <input
-                        type="select"
-                        value={category}
-                        checked={selectedCategorys.includes(category)}
-                        onChange={handleCategoryChange}
-                    />
-                    {category}
-                </div>
-            ))} */}
         </div>
     )
 }

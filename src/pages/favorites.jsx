@@ -7,16 +7,13 @@ import { Filter } from '../cmps/filter'
 export function Favorites() {
     const [favorites, setFavorites] = useState()
     const [filterBy, setFilterBy] = useState('')
-    const [sort, setSort] = useState('')
 
     useEffect(() => {
         loadFavorites()
-        console.log(filterBy)
-        // setFavorites(storageService.loadFromStorage('quotesDB'))
-    }, [filterBy, sort])
+    }, [filterBy])
 
     function loadFavorites() {
-        setFavorites(quoteService.query(filterBy, sort))
+        setFavorites(quoteService.query(filterBy))
     }
 
     function onSetFilter(filterBy) {

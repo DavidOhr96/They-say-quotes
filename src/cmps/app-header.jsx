@@ -10,7 +10,7 @@ export function AppHeader(){
         <header>
             {/* <UserMsg /> */}
              <ul>
-                 <li>   <NavLink to="/generator">Generator</NavLink></li>
+                 <li>   <NavLink to="/">Generator</NavLink></li>
                  <li> <NavLink to="/favorites">Favorites</NavLink></li>
                     </ul>
         </header>
