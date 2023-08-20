@@ -96,9 +96,15 @@ export function Filter({ filterBy, onSetFilter }) {
     return (
         <section className="filter">
             <form onSubmit={onSubmitFilter}>
-                <label htmlFor="quote">Quote:</label>
+                <div>
+                <label htmlFor="quote">Quote: </label>
                 <input value={quote} onChange={handleChange} name="quote" id="quote" type="text" placeholder="By quote" />
-                <CategorySelector categorys={categorys} onCategoryChange={onCategoryChange} />
+                </div>
+                <div>
+                {/* <label htmlFor="CategorySelector">category: </label> */}
+                <CategorySelector categorys={categorys} onCategoryChange={onCategoryChange}  />
+                </div>
+                <button>filter</button>
             </form>
         </section>
 
