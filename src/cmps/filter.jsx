@@ -3,7 +3,7 @@ import { CategorySelector } from './cataegory-selector'
 
 export function Filter({ filterBy, onSetFilter }) {
     const [filterByToEdit, setFilterByToEdit] = useState(filterBy)
-    const {quote}=filterByToEdit
+    const { quote } = filterByToEdit
     const categorys = [
         'age',
         'alone',
@@ -74,7 +74,7 @@ export function Filter({ filterBy, onSetFilter }) {
         'success']
 
     function handleChange({ target }) {
-        console.log(filterBy,'fromfilter')
+        console.log(filterBy, 'fromfilter')
         const field = target.name
         const value = target.type === 'number' ? (+target.value || '') : target.value
         setFilterByToEdit(prevFilterBy => ({ ...prevFilterBy, [field]: value }))
@@ -97,14 +97,13 @@ export function Filter({ filterBy, onSetFilter }) {
         <section className="filter">
             <form onSubmit={onSubmitFilter}>
                 <div>
-                <label htmlFor="quote">Quote: </label>
-                <input value={quote} onChange={handleChange} name="quote" id="quote" type="text" placeholder="By quote" />
+                    <label htmlFor="quote">Quote: </label>
+                    <input value={quote} onChange={handleChange} name="quote" id="quote" type="text" placeholder="By quote" />
                 </div>
                 <div>
-                {/* <label htmlFor="CategorySelector">category: </label> */}
-                <CategorySelector categorys={categorys} onCategoryChange={onCategoryChange}  />
+                    <CategorySelector categorys={categorys} onCategoryChange={onCategoryChange} />
                 </div>
-                <button onClick={()=>onSetFilter(filterBy)}>filter</button>
+                <button onClick={() => onSetFilter(filterBy)}>filter</button>
             </form>
         </section>
 

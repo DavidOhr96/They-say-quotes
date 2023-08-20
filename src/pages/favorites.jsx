@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import { quoteService } from '../services/quote.service'
-import { storageService } from '../services/storage.service'
-
 import { Filter } from '../cmps/filter'
 
 export function Favorites() {

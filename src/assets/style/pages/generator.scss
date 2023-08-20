@@ -1,21 +1,25 @@
-body{
+body {
     background-color: $clr1;
 }
-.generator{
-    .quote{
-        font-family:courgette ;
+
+.generator {
+    .quote {
+        font-family: courgette;
     }
-    button{
-        &:hover{
+
+    button {
+        &:hover {
             cursor: pointer;
         }
+
         font-family: cinzel;
         font-weight: 700;
         border-radius: 17px;
         border: none;
         background-color: $clr4;
     }
-    h2{
+
+    h2 {
         margin: auto;
         background-color: $clr3;
         text-align: center;
@@ -23,11 +27,13 @@ body{
         padding: 10px;
         border-radius: 17px;
     }
-    .panel{
+
+    .panel {
         margin-top: 40px;
         display: flex;
         justify-content: space-around;
-        h3{
+
+        h3 {
             background-color: $clr3;
             padding: 10px;
             border-radius: 17px;
@@ -35,19 +41,22 @@ body{
             display: inline;
         }
     }
-    .like{
+
+    .like {
         align-self: center;
         height: 45px;
     }
-    .button-container{
+
+    .button-container {
         margin-top: 20px;
         display: flex;
     }
-    .new-quote{
+
+    .new-quote {
         border-radius: 0;
         padding: 20px;
         align-self: center;
-       margin-left: auto;
-       margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

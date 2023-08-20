@@ -1,18 +1,18 @@
+// Basics//
 @import '../src/assets/style/basics/base';
 @import '../src/assets/style/basics/forms';
 @import '../src/assets/style/basics/helpers';
 @import '../src/assets/style/basics/layout';
 @import '../src/assets/style/basics/links';
-
+// Setup//
 @import '../src/assets/style/setup/functions';
 @import '../src/assets/style/setup/mixins';
 @import '../src/assets/style/setup/typography';
 @import '../src/assets/style/setup/variables';
-
-@import '../src/assets/style/pages/home.scss';
+// Pages//
 @import'../src/assets/style/pages/generator.scss';
 @import'../src/assets/style/pages/favorites.scss';
-
+// Components//
 @import'../src/assets/style/cmps/header.scss';
 @import '../src/assets/style/cmps/filter.scss';
 @import '../src/assets/style/cmps/user-msg.scss'

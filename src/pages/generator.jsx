@@ -6,7 +6,7 @@ import { showSuccessMsg } from '../services/event-bus.service'
 export function Generator() {
     const [quote, setQuote] = useState({
         quote: 'Every egg can be a surprise egg if you throw it at someone randomly enough.',
-        author: 'me'
+        author: 'Me'
     })
 
     function getQuote() {
@@ -18,7 +18,7 @@ export function Generator() {
         if (fromStorage) liked = fromStorage
         liked.unshift(quote)
         storageService.saveToStorage('quotesDB', liked)
-       showSuccessMsg('Quote added to favorites ')
+        showSuccessMsg('Quote added to favorites ')
     }
     return (
         <main className='generator'>
